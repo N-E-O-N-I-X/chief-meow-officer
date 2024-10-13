@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('img/background.jpg');
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.grid {
+  display: grid;
+}
+
+.content {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.button-div {
+  margin-top: 200px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+button {
+  background-color: black;
+  color: white;
+  width: 160px;
+  height: 60px;
+  font-size: 20px;
+  border: 8px greenyellow solid;
+  border-radius: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  transition: transform 0.2s;
+}
+
+.cat {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+  animation: zoomIn 2s ease-in-out;
+  border: 8px greenyellow solid;
+}
+
+.cat:hover {
+  cursor: pointer;
+  transform: scale(1.14);
+  transition: transform 0.2s;
+    width: 200px;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+.title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2em;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+      font-size: 2em;
+  }
+
+  .description {
+      font-size: 1em;
+  }
+
+  .cat {
+      width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+      font-size: 1.5em;
+  }
+
+  .description {
+      font-size: 0.9em;
+  }
+
+  .cat {
+      width: 120px;
+  }
+}
